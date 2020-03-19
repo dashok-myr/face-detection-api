@@ -27,10 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-app.get("/", (req, res) => {
-  res.send(database.users);
-});
-
+app.get('/', (req, res) => { res.send('it is working!') })
 //signin --> POST = success/fail
 app.post("/signin", (req, res) => { signin.handelSignin(req, res, db, bcrypt) })
 //register --> POST = user
